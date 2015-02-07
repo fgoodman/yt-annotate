@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "YT Annotate",
+  "version": "1",
+  "description": "Annotate the Youtubes",
+  "background_page": "background.html",
+  "browser_action": {
+    "name": "YT Annotate",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
