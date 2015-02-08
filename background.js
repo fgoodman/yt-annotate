@@ -1,6 +1,5 @@
 function createAnnotation(percent) {
 	percent = percent * 100;
-	console.log(percent);
 	var annotation = $("<div style=\"left: " + percent + "%;\" />");
 	annotation.addClass("ytp-annotation-marker");
 	$("#player-api .html5-progress-bar .ytp-progress-list").append(annotation);
@@ -19,10 +18,10 @@ $(".html5-context-menu").prepend(li);
 
 var x = 0;
 $(document).bind("contextmenu", function (e) {
-	x = e.pageX;
+	x = e.pageX; // hack
 });
 
 $("#add-annotation").on("click", function () {
-	$("#body-container").click();
+	$("#body-container").click(); // hack
 	createAnnotation((x - $(".html5-video-player").offset().left) / $(".html5-video-player").width());
 });
