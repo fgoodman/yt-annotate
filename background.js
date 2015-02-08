@@ -1,11 +1,19 @@
 var annotations = [];
 
 function createAnnotation(percent) {
+	var v = prompt("Annotation text");
+	if (v === null) {
+		alert("Please enter text.");
+		return;
+	}
 	percent = percent * 100;
 	annotations.push(percent);
 	var annotation = $("<div id=\"a" + percent.toString().replace(/\./g, "").substring(0, 5) + "\" style=\"left: " + percent + "%;\" />");
 	console.log(percent.toString().replace(/\./g, "").substring(0, 5));
 	annotation.addClass("ytp-annotation-marker");
+	var content = $("<div />");
+	content.html(v);
+	annotation.append(content);
 	$("#player-api .html5-progress-bar .ytp-progress-list").append(annotation);
 }
 
