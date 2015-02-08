@@ -3,14 +3,18 @@
   "name": "YT Annotate",
   "version": "1",
   "description": "Annotate the Youtubes",
-  "background_page": "background.html",
   "browser_action": {
     "name": "YT Annotate",
     "icons": ["icon.png"],
     "default_icon": "icon3.png"
   },
-  "content_scripts": [ {
-    "js": [ "jquery.min.js", "background.js" ],
-    "matches": [ "http://youtube.com/*", "https://youtube.com/*"]
-  }]
+  "content_scripts": [ 
+    {
+      "js": [ "jquery.min.js", "background.js" ],
+      "matches": [ "http://www.youtube.com/*", "https://www.youtube.com/*"]
+    }
+  ],
+  "permissions": [
+    "http://www.youtube.com/", "https://www.youtube.com/"
+  ]
 }
