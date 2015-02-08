@@ -1,0 +1,10 @@
+.ytp-annotation-marker {
+	background: #FFF;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	margin-left: -4px;
+	position: absolute;
+	width: 8px;
+	z-index: 935;
+}
