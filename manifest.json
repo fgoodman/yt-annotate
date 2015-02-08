@@ -10,8 +10,9 @@
   },
   "content_scripts": [ 
     {
+      "css": [ "background.css" ],
       "js": [ "jquery.min.js", "background.js" ],
-      "matches": [ "http://www.youtube.com/*", "https://www.youtube.com/*"]
+      "matches": [ "http://www.youtube.com/*", "https://www.youtube.com/*" ]
     }
   ],
   "permissions": [
