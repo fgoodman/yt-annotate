@@ -11,9 +11,6 @@
   },
   "content_scripts": [ {
     "js": [ "jquery.min.js", "background.js" ],
-    "matches": [ "http://*/*", "https://*/*"]
-  }],
-  "permissions": [
-    "tabs", "https://youtube.com"
-    ]
+    "matches": [ "http://youtube.com/*", "https://youtube.com/*"]
+  }]
 }
